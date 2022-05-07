@@ -206,9 +206,11 @@ function toggleColorInvert() {
   var text = $("#toggleDisplayMode")
   if (icon.hasClass("fa-sun")) {
     icon.removeClass("fa-sun").addClass("fa-moon")
+    text.toggleClass("sun")
   }
   else {
     icon.removeClass("fa-moon").addClass("fa-sun")
+    text.toggleClass("sun")
   }
 }
 

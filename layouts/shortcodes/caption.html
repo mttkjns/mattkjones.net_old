@@ -1,0 +1,4 @@
+{{ $_hugo_config := `{ "version": 1 }` }}
+{{ with .Get "text" }}
+    <div class="caption"><h4>{{ $.Get "text" }}</h4></div>
+{{ end }}

@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
       </button>
       <div class="navbar-brand-img-container">
-        <a class="navbar-brand-img" href="{{ "" | absLangURL }}"><img class="avatar-img" src="/logo.png" alt="{{ .Site.Title }}" /></a>
+        <a class="navbar-brand-img" href="{{ "" | absLangURL }}"><img class="avatar-img" src="{{ .Site.Params.logo }}" alt="{{ .Site.Title }}" /></a>
       </div>
       <a class="navbar-brand" href="{{ "" | absLangURL }}">{{ .Site.Title }}</a>
     </div>
@@ -32,7 +32,7 @@
           {{ end }}
         {{ end }}
         <li>
-          <a id="toggleDisplayMode" alt="display mode"><i class="fas fa-sun"></i></a>
+          <a id="toggleDisplayMode" class="sun" alt="display mode"><i class="fas fa-sun"></i></a>
         </li>
 
         {{ if .Site.IsMultiLingual }}
@@ -68,7 +68,7 @@
       </ul>
     </div>
 
-    {{ if isset .Site.Params "logo" }}
+    <!-- {{ if isset .Site.Params "logo" }}
       <div class="avatar-container">
         <div class="avatar-img-border">
           <a title="{{ .Site.Title }}" href="{{ "" | absLangURL }}">
@@ -76,7 +76,7 @@
           </a>
         </div>
       </div>
-    {{ end }}
+    {{ end }} -->
 
   </div>
 </nav>

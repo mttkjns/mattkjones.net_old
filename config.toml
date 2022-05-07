@@ -7,6 +7,12 @@ pygmentsUseClasses = true
 pygmentsCodeFences = true
 summaryLength = 50
 enableGitInfo = true
+ignorefiles = [ "content/_templates*" ]
+
+[module]
+[[module.mounts]]
+  source = 'mj_web_content'
+  target = 'content'
 
 [markup.goldmark.renderer]
 unsafe= true
@@ -15,10 +21,10 @@ unsafe= true
     homeTitle = "Hi, Matt Jones here" # Set a different text for the header on the home page
     subtitle = ""
     mainSections = [""]
-    #logo = "logo.png" # Expecting square dimensions
-    #favicon = "img/favicon.ico"
+    logo = "/logo.png" # Expecting square dimensions
+    favicon = "/favicon.png"
     dateFormat = "January 2, 2006"
-    commit = "https://github.com/mttkjns/mattkjones.net-hugo/tree/"
+    commit = "https://github.com/mttkjns/mattkjones.net/tree/"
     rss = false
     comments = false
     readingTime = false
@@ -60,24 +66,19 @@ unsafe= true
   # slack = "username"
 
 [[menu.main]]
-    name = "Home"
-    url = ""
-    weight = 1
-
-[[menu.main]]
     name = "Notes"
     url = "notes/"
-    weight = 2
+    weight = 1
 
 [[menu.main]]
     name = "Now"
     url = "page/now"
-    weight = 3
+    weight = 2
 
 [[menu.main]]
     identifier = "more"
     name = "More"
-    weight = 4
+    weight = 3
 
 [[menu.main]]
     parent = "more"

@@ -2,8 +2,8 @@
     {{ $lastmodstr := default (i18n "dateFormat") .Site.Params.dateformat | .Lastmod.Format }}
     {{ $datestr := default (i18n "dateFormat") .Site.Params.dateformat | .Date.Format }}
     <i class="fas fa-pen"></i>&nbsp;{{ $datestr }}
-    {{ if ne $datestr $lastmodstr }}
-      &nbsp;{{ $lastmodstr | i18n "lastModified"  }}
+    {{ if ne $datestr $lastmodstr }}</span></br>
+      &nbsp;<span class="small">{{ $lastmodstr | i18n "lastModified"  }}</span>
     {{ end }}
     {{ if .Site.Params.readingTime }}
       &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;{{ i18n "readingTime"}}{{ .ReadingTime }}&nbsp;{{ i18n "readTime" }}

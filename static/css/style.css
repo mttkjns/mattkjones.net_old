@@ -42,13 +42,17 @@ body > div.container.light-mode > div > div > article > div.box > figure {
 
 body {
     font-family: 'Lora', 'Times New Roman', serif;
-    font-size: 18px;
+    font-size: 20px;
     color: #b9b9b9;
     position: relative;
     background-color: #212121;
     display: flex;
     flex-flow: column;
     height: 100vh;
+}
+
+small {
+    font-size: 10px;
 }
 
 p a {
@@ -316,4 +320,39 @@ body > div.container > div > div > article > ul > li > a {
 
 .pager li>a {
     border: 0px;
+}
+
+#toggleDisplayMode.sun:hover {
+    color: #f0c33c;
+}
+
+#toggleDisplayMode:hover {
+    color: #6a6a6a;
+}
+
+figcaption > h4 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    font-style: italic;
+    color: #b9b9b9;
+    margin: 5px;
+}
+
+.caption > h4 {
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0;
+}
+
+.pswp__caption__center {
+    text-align: center;
+}
+
+figcaption > h4 {
+    text-align: center;
+}
+
+.pager li a:hover {
+    border: 0;
 }
