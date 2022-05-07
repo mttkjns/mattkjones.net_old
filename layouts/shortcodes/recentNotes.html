@@ -1,0 +1,7 @@
+{{ $_hugo_config := `{ "version": 1 }` }}
+<h3>Recent Notes</h3>
+{{ range first 5 (where .Site.RegularPages "Type" "notes") }}
+<p>
+    <a href="{{ .Permalink }}">{{ .Title }}</a> - {{ .Summary }}
+</p>
+{{ end }}

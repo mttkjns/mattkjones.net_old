@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>matt_jones</title>
+    <link>https://www.mattkjones.net/notes/</link>
+    <description>Recent content on matt_jones</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 07 May 2022 00:32:33 +0000</lastBuildDate><atom:link href="https://www.mattkjones.net/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Shortcodes for Hugo</title>
+      <link>https://www.mattkjones.net/notes/shortcodes-for-hugo/</link>
+      <pubDate>Sat, 07 May 2022 00:32:33 +0000</pubDate>
+      
+      <guid>https://www.mattkjones.net/notes/shortcodes-for-hugo/</guid>
+      <description>Some quick shortcodes for reference.</description>
+    </item>
+    
+    <item>
+      <title>Azure Storage Blobs</title>
+      <link>https://www.mattkjones.net/notes/azure-storage-blobs/</link>
+      <pubDate>Fri, 06 May 2022 21:30:32 +0000</pubDate>
+      
+      <guid>https://www.mattkjones.net/notes/azure-storage-blobs/</guid>
+      <description>&lt;p&gt;Here&amp;rsquo;s my first post. I just need some content in here so here it goes. This is basic usage of blob storage accounts on Azure.&lt;/p&gt;
+&lt;p&gt;Why use this?&lt;/p&gt;
+&lt;p&gt;Thinking of using one for static site serving or just to host all my public images to be able to share them across multiple platforms. It is also fairly &lt;a href=&#34;https://www.google.com/search?q=azure%20pricing&#34;&gt;affordable&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

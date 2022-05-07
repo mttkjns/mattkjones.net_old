@@ -1,0 +1,5 @@
+.vs*
+.obsidian*
+.hugo*
+content*
+serve.ps1

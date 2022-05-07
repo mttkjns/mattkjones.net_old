@@ -1,0 +1,98 @@
+baseURL = 'https://www.mattkjones.net'
+languageCode = 'en-us'
+title = 'matt_jones'
+theme = 'beautifulhugo'
+metaDataFormat = "yaml"
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+summaryLength = 50
+enableGitInfo = true
+
+[markup.goldmark.renderer]
+unsafe= true
+
+[Params]
+    homeTitle = "Hi, Matt Jones here" # Set a different text for the header on the home page
+    subtitle = ""
+    mainSections = [""]
+    #logo = "logo.png" # Expecting square dimensions
+    #favicon = "img/favicon.ico"
+    dateFormat = "January 2, 2006"
+    commit = "https://github.com/mttkjns/mattkjones.net-hugo/tree/"
+    rss = false
+    comments = false
+    readingTime = false
+    wordCount = false
+    useHLJS = false
+    socialShare = false
+    delayDisqus = false
+    showRelatedPosts = true
+    hideAuthor = true
+
+[Author]
+  name = "mail [at] mattkjones [dot] net"
+  # website = "yourwebsite.com"
+  # email = "youremail@domain.com"
+  # facebook = "username"
+  # github = "username"
+  # gitlab = "username"
+  # bitbucket = "username"
+  # twitter = "username"
+  # reddit = "username"
+  # linkedin = "username"
+  # xing = "username"
+  # stackoverflow = "users/XXXXXXX/username"
+  # snapchat = "username"
+  # instagram = "username"
+  # youtube = "user/username" # or channel/channelname
+  # soundcloud = "username"
+  # spotify = "username"
+  # bandcamp = "username"
+  # itchio = "username"
+  # vk = "username"
+  # paypal = "username"
+  # telegram = "username"
+  # 500px = "username"
+  # codepen = "username"
+  # mastodon = "url"
+  # kaggle = "username"
+  # weibo = "username"
+  # slack = "username"
+
+[[menu.main]]
+    name = "Home"
+    url = ""
+    weight = 1
+
+[[menu.main]]
+    name = "Notes"
+    url = "notes/"
+    weight = 2
+
+[[menu.main]]
+    name = "Now"
+    url = "page/now"
+    weight = 3
+
+[[menu.main]]
+    identifier = "more"
+    name = "More"
+    weight = 4
+
+[[menu.main]]
+    parent = "more"
+    name = "About"
+    url = "page/about"
+    weight = 1
+
+[[menu.main]]
+    parent = "more"
+    name = "Resume"
+    url = "page/resume"
+    weight = 2
+
+[[menu.main]]
+    parent = "more"
+    name = "Contact"
+    url = "page/contact"
+    weight = 3
