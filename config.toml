@@ -1,4 +1,4 @@
-baseURL = 'https://www.mattkjones.net'
+baseURL = 'https://www.mttj.net'
 languageCode = 'en-us'
 title = 'matt_jones'
 theme = 'beautifulhugo'
@@ -36,7 +36,7 @@ unsafe= true
     hideAuthor = true
 
 [Author]
-  name = "mail [at] mattkjones [dot] net"
+  name = "mail [at] mttj [dot] net"
   # website = "yourwebsite.com"
   # email = "youremail@domain.com"
   # facebook = "username"
