@@ -7,7 +7,7 @@ pygmentsUseClasses = true
 pygmentsCodeFences = true
 summaryLength = 50
 enableGitInfo = true
-ignorefiles = [ "content/_templates*" ]
+ignorefiles = [ "content/_templates*", "content/.obsidian*" ]
 
 [module]
 [[module.mounts]]
@@ -34,6 +34,7 @@ unsafe= true
     delayDisqus = false
     showRelatedPosts = true
     hideAuthor = true
+    mediaHost = "https://mjpubstore.blob.core.windows.net/mttj-net"
 
 [Author]
   name = "mail [at] mttj [dot] net"

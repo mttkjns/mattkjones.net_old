@@ -1,7 +1,9 @@
 {{- $url := urls.Parse .Destination -}}
 {{- $scheme := $url.Scheme -}}
+{{- $imgHost := site.Params.mediaHost | safeURL -}}
 
-<img src="
+
+<img src="{{ $imgHost }}
   {{- if eq $scheme "" -}}
     {{- if strings.HasSuffix $url.Path ".md" -}}
       {{- relref .Page .Destination | safeURL -}}

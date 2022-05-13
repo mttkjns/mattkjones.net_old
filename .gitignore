@@ -2,4 +2,6 @@
 .obsidian*
 .hugo*
 public*
+mj_web_content/media*
 serve.ps1
+*.bat
