@@ -24,22 +24,28 @@ Documentation and licence at https://github.com/liwenyip/hugo-easy-gallery/
 			{{- $isthumb := .Name | findRE ($thumbext | printf "%s\\.") }}<!-- is the current file a thumbnail image? -->
 			{{- $isimg := lower .Name | findRE "\\.(gif|jpg|jpeg|tiff|png|bmp)" }}<!-- is the current file an image? -->
 			{{- if and $isimg (not $isthumb) }}
-				{{- $caption :=  .Name | replaceRE "\\..*" "" | humanize }}<!-- humanized filename without extension -->
-				{{- $linkURL := print ($.Page.Scratch.Get "baseURL") ($.Get "dir") "/" .Name | absURL }}<!-- absolute URL to hi-res image -->
-				{{- $thumb := .Name | replaceRE "(\\.)" ($thumbext | printf "%s.") }}<!-- filename of thumbnail image -->
-				{{- $thumbexists := where $files "Name" $thumb }}<!-- does a thumbnail image exist? --> 
-				{{- $thumbURL := print ($.Page.Scratch.Get "baseURL") ($.Get "dir") "/" $thumb | absURL }}<!-- absolute URL to thumbnail image -->
-				<div class="box">
-				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-				    <div class="img" style="background-image: url('{{ if $thumbexists }}{{ $thumbURL }}{{ else }}{{ $linkURL }}{{ end }}');" >
-				      <img itemprop="thumbnail" src="{{ if $thumbexists }}{{ $thumbURL }}{{ else }}{{ $linkURL }}{{ end }}" alt="{{ $caption }}" /><!-- <img> hidden if in .gallery -->
-				    </div>
-			      <figcaption>
-		          <p>{{ $caption }}</p>
-			      </figcaption>
-				    <a href="{{ $linkURL }}" itemprop="contentUrl"></a><!-- put <a> last so it is stacked on top -->
-				  </figure>
-				</div>
+				{{ with  $img := resources.GetRemote (print ($.Page.Scratch.Get "baseURL") ($.Get "dir") "/" .Name) }}
+					{{ with .Err }}
+						{{ warnf "%s" . }}
+					{{ else }}
+						{{ $img := $img.Resize "2400x" }}
+						{{ $imgThumb := $img.Resize "1600x" }}
+						{{- $caption :=  .Name | replaceRE "\\..*" "" | humanize }}<!-- humanized filename without extension -->
+						{{- $linkURL := $img.Permalink }}<!-- absolute URL to hi-res image -->
+						{{- $thumbURL := $imgThumb.Permalink }}<!-- absolute URL to thumbnail image -->
+						<div class="box">
+						<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+							<div class="img" style="background-image: url('{{ $linkURL }}');" >
+							<img itemprop="thumbnail" src="{{ $thumbURL }}" alt="{{ $caption }}" /><!-- <img> hidden if in .gallery -->
+							</div>
+						<figcaption>
+						<p>{{ $caption }}</p>
+						</figcaption>
+							<a href="{{ $linkURL }}" itemprop="contentUrl"></a><!-- put <a> last so it is stacked on top -->
+						</figure>
+						</div>
+					{{ end }}
+				{{ end }}
 			{{- end }}
 		{{- end }}
 	{{- else -}}

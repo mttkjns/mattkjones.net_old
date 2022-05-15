@@ -16,7 +16,9 @@
             </div>
         </div>
         {{ if .Params.image }}
-        <img src="{{ .Params.image }}" alt="{{ .Title }}" class="img-title" />
+            {{- $imgHost := $.Site.Params.mediaHost | safeURL -}}
+            {{- $img := resources.GetRemote (print $imgHost .Params.image) -}}
+            <img src="{{ $img.RelPermalink }}" alt="{{ .Title }}" class="img-title" />
         {{ end }}
         {{ if .Params.video }}
         <video loop autoplay muted playsinline class="img-title">

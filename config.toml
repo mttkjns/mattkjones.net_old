@@ -7,7 +7,10 @@ pygmentsUseClasses = true
 pygmentsCodeFences = true
 summaryLength = 50
 enableGitInfo = true
-ignorefiles = [ "content/_templates*", "content/.obsidian*" ]
+ignorefiles = [ "content/_templates*", "content/.obsidian*", '\.bat$' ]
+
+[imaging]
+resampleFilter = "linear"
 
 [module]
 [[module.mounts]]

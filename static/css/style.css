@@ -121,10 +121,19 @@ a:hover {
     visibility: visible;
 }
 
-.navbar-custom .navbar-brand-img .avatar-img {
+.navbar-brand-img-container .navbar-brand-img .avatar-img {
     transition: visibility 0.5s, opacity 0.5s, padding 0.5s, height 0.5s ease-in-out;
     width: 75px;
     border-radius: 3px;
+    opacity: 100;
+    visibility: visible;
+}
+
+.top-nav-short .navbar-brand-img-container .navbar-brand-img .avatar-img {
+    transition: visibility 0.5s, opacity 0.5s, height 0.5s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    height: 0px;
 }
 
 .navbar-custom .navbar-brand-img-container {
@@ -342,4 +351,31 @@ figcaption > h4 {
 
 .pager li a:hover {
     border: 0;
+}
+
+@media (max-width: 767px) {
+    .navbar-brand-img-container .navbar-brand-img .avatar-img {
+        width: 60px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .top-nav-short .navbar-brand-img-container .navbar-brand-img .avatar-img {
+        width: 60px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+}
+
+.navbar-toggle {
+    margin-top: 25px;
+}
+
+.top-nav-short .navbar-toggle {
+    margin-top: 8px;
+}
+
+.highlight pre code {
+    white-space: pre;
+    overflow-x: auto;
 }
