@@ -379,3 +379,7 @@ figcaption > h4 {
     white-space: pre;
     overflow-x: auto;
 }
+
+.row {
+    margin-right: -10px;
+}
